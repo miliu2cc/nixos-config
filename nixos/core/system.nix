@@ -38,6 +38,14 @@
             #c
             gcc
         ];
+
+        sessionVariables = {
+          WLR_NO_HARDWARE_CURSORS = "1";
+          NIXOS_OZONE_WL = "1";
+          __NV_PRIME_RENDER_OFFLOAD = "1";
+          __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+
+        };
     };
     #启用非自由软件
     nixpkgs.config.allowUnfree = true;

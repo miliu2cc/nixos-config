@@ -4,7 +4,7 @@
         ./hardware-configuration.nix
         ./bootloader.nix
         ./daed.nix
-        #./GPU.nix
+        ./GPU.nix
         ./i18n.nix
         ./network.nix
         ./fish.nix

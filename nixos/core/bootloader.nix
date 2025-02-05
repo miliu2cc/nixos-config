@@ -8,6 +8,6 @@
     boot.loader.grub.useOSProber = true;
     boot.kernelPackages = pkgs.linuxPackages_zen;
     boot.extraModulePackages = [config.boot.kernelPackages.acpi_call];
-    boot.kernelModules = [ "acpi_call" ];
+    boot.kernelModules = [ "acpi_call"];
     
 }

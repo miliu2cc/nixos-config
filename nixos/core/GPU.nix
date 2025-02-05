@@ -9,21 +9,21 @@
     services.xserver.videoDrivers = ["nvidia"];
     boot.kernelParams = [
         "nvidia-drm.modeset=1"
-        "nvidia-drm.fbdev=1"
     ];
     hardware.nvidia = {
-        package = config.boot.kernelPackages.nvidiaPackages.latest;
+        package = config.boot.kernelPackages.nvidiaPackages.stable;
         prime = {
-            #sync.enable = true;
+      #sync.enable = true;
             offload.enable = true;
+      #     offload.enableOffloadCmd = true;
             intelBusId = "PCI:0:2:0";
             nvidiaBusId = "PCI:1:0:0";
         };
         modesetting.enable = true;
-        powerManagement.enable = true;
+        powerManagement.enable = false;
         powerManagement.finegrained = false;
         open = false;
-        nvidiaSettings = true;
+        nvidiaSettings = false;
     };
     /*specialisation = {
         on-the-go.configuration = {
